@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino Oasis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="height: 49px;"></div> 
+
+<!-- navigace -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container"> 
+        <a class="navbar-brand">
+            <img src="obr/logo1.png" alt="Kino Oasis" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-film"></i> Filmy</a></li>
+                <li class="nav-item"><a class="nav-link" href="platno.html"><i class="fas fa-ticket-alt"></i> Rezervace</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#blogModal"><i class="fas fa-blog"></i> Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="fas fa-info-circle"></i> O kině</a></li>   
+                <li class="nav-item"><a class="nav-link" href="#Kontakt"><i class="fas fa-envelope"></i> Kontakt</a></li>
+            </ul>
+            <div class="navbar-divider"></div>  <!-- oddělovací čára -->
+        </div>
+    </div>
+</nav>
+
+ <!-- Modální okno pro Blog -->
+<div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="blogModalLabel">🎥 Blog Kino Oasis</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+            </div>
+            <div class="modal-body">
+                <h3>📢 Novinky z Kina Oasis</h3>
+                <p>Vítejte na blogu našeho kina! Zde se dozvíte vše o **nejnovějších filmech, zajímavostech ze zákulisí** a vylepšeních, která pro vás chystáme. Pojďme se podívat, co je u nás nového!</p>
+
+                <h3>🎬 Co právě promítáme?</h3>
+                <p>Každý měsíc přinášíme do našeho programu **nové filmové premiéry**, ale nezapomínáme ani na oblíbené klasiky. Tento měsíc si můžete užít:</p>
+                <ul>
+                    <li>⭐ **Akční trháky** plné napětí a nečekaných zvratů</li>
+                    <li>🎭 **Dramata** s hlubokým příběhem a skvělými hereckými výkony</li>
+                    <li>🤣 **Komedie**, které vám zaručeně zlepší náladu</li>
+                    <li>👨‍👩‍👧‍👦 **Rodinné filmy**, ideální na víkendovou pohodu</li>
+                </ul>
+
+                <h3>🎞 Jak se web Kino Oasis vyvíjí?</h3>
+                <p>Neustále pracujeme na tom, aby váš zážitek z rezervace i sledování filmů byl co nejlepší. Nedávno jsme vylepšili:</p>
+                <ul>
+                    <li>✅ **Přehlednější filtrování filmů** – snadněji najdete ten správný žánr</li>
+                    <li>✅ **Lepší zobrazení sedadel** – teď si vyberete to nejlepší místo ještě snadněji</li>
+                    <li>✅ **Rychlejší načítání stránek** – rezervace je nyní otázkou pár kliknutí</li>
+                </ul>
+
+                <h3>🚀 Co chystáme dál?</h3>
+                <p>Máme spoustu plánů na vylepšení! V nejbližší době se můžete těšit na:</p>
+                <ul>
+                    <li>📊 **Možnost hodnocení filmů** – dejte vědět ostatním, co se vám líbilo</li>
+                    <li>🌙 **Noční režim** – pro příjemnější prohlížení webu ve tmě</li>
+                    <li>🔔 **Upozornění na premiéry** – žádný skvělý film vám už neuteče!</li>
+                </ul>
+
+                <p class="text-center"><strong>💡 Děkujeme, že sledujete náš blog! Kino Oasis je tu pro vás, tak si užijte skvělou podívanou! 💡</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modální okno pro O kině -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="aboutModalLabel">O kině Oasis</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+            </div>
+            <div class="modal-body">
+                <h3>🎬 Kino Oasis – Místo, kde ožívají příběhy</h3>
+                <p>Kino Oasis není jen obyčejné kino. Je to prostor, kde se film stává zážitkem. Od doby svého otevření se stalo oblíbeným místem filmových nadšenců, kteří chtějí prožít film v té nejlepší kvalitě.</p>
+
+                <h3>📽️ Špičková technologie pro dokonalý zážitek</h3>
+                <p>Abychom zajistili co nejlepší filmový prožitek, používáme moderní <strong>4K laserové projektory</strong>, které přinášejí dokonale ostrý obraz s bohatými barvami. Zvuková technologie <strong>Dolby Atmos</strong> pak dodává prostorový zvuk, díky kterému se ocitnete přímo uprostřed děje.</p>
+
+                <h3>🍿 Komfort a pohodlí pro diváky</h3>
+                <p>Chceme, aby každý filmový večer byl příjemný. Proto nabízíme:</p>
+                <ul>
+                    <li>✅ **Ergonomická sedadla** s dostatkem prostoru pro nohy</li>
+                    <li>✅ **Občerstvení** čerstvý popcorn, nachos, různé nápoje a kávu</li>
+                </ul>
+
+                <h3>🎟️ Kino pro každého</h3>
+                <p>Ať už jste fanoušek napínavých thrillerů, epických sci-fi filmů nebo rodinných animáků, v Kině Oasis si každý najde něco svého. Pravidelně uvádíme **nejnovější filmové premiéry**, ale také občasné **speciální projekce kultovních klasik**.</p>
+
+                <p class="text-center"><strong>💡 Těšíme se na vaši návštěvu a přejeme vám skvělý filmový zážitek! 💡</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- dropdown na filtraci filmu -->
+<div class="filter-container">
+    <label for="genreFilter" class="filter-label">🎬 Vyberte žánr:</label>
+    <select id="genreFilter" class="custom-dropdown">
+        <option value="všechny">Všechny žánry</option>
+        <option value="horor">👻 Horor</option>
+        <option value="komedie">😂 Komedie</option>
+        <option value="fantasy">🔮 Fantasy / Sci-fi</option>
+    </select>
+</div>
+
+
+<!-- Tlačítko na skrytí/zobrazení navigace -->
+<button class="toggle-nav" id="toggleNavBtn">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+ <!-- Seznam filmů (bude generován JavaScriptem) -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8">
+            <div id="film-list"></div>
+        </div>
+    </div>
+</div>
+
+    <!-- kontaktní údaje -->
+    <div class="container my-5" id="Kontakt">
+        <hr class="contact-divider"> <!-- Oddělovací čára -->
+        <h2 class="text-center">Kontakt</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contact-card text-center p-3">
+                    <i class="fas fa-envelope fa-2x text-danger"></i>
+                    <h4>Email</h4>
+                    <p>info@kinooasis.cz</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card text-center p-3">
+                    <i class="fas fa-phone fa-2x text-danger"></i>
+                    <h4>Telefon</h4>
+                    <p>+420 123 456 789</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card text-center p-3">
+                    <i class="fas fa-map-marker-alt fa-2x text-danger"></i>
+                    <h4>Adresa</h4>
+                    <p>Ulice 123, Praha, ČR</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Kontaktní formulář -->
+        <div class="contact-form mt-5">
+            <h3 class="text-center">Napište nám</h3>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Jméno</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Zpráva</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Odeslat</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Kino Oasis | Všechna práva vyhrazena</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>

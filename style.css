@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #e5cac401; /* Tmavě fialová */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Poloprůhledná barva */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Jemný stín pod lištou */
+    border-radius: 20px; /* Zaoblené rohy */
+    padding: 10px; /* Trochu prostoru uvnitř lišty */
+    height: 95px; /* Menší výška */
+    transition: transform 0.3s ease-in-out; /* Plynulý přechod */
+
+}
+
+/* Precizní umístění hamburger menu */
+.navbar-toggler {
+    position: absolute;
+    top: 20px; /* Správná výška pro zarovnání */
+    right: 15px; /* Zachováme správné zarovnání vpravo */
+    padding: 8px; /* Trochu menší tlačítko */
+    background: rgba(255, 255, 255, 0.3); /* Lepší viditelnost */
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Zvýraznění hamburgeru při najetí */
+.navbar-toggler:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Ujistíme se, že ikona je dostatečně viditelná */
+.navbar-toggler-icon {
+    filter: brightness(2);
+    width: 25px; /* Lehce zvětší ikonu */
+    height: 25px;
+}
+
+/* Mobilní verze */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        top: 15px; /* Mírně upravená výška na mobilu */
+        right: 10px;
+    }
+}
+
+.navbar:hover {
+    background-color: rgba(107, 102, 102, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+    margin-left: 10px; /* Posune celé logo o 10px od levé strany */
+    position: absolute;
+    left: 80px; /* Logo bude přesně 10px od levého okraje obrazovky */
+    top: 50%;
+    transform: translateY(-50%); /* Zarovná logo vertikálně na střed navigační lišty */
+}
+
+.navbar-brand img {
+    height: 90px; /* velikost loga jak chci*/
+}
+
+
+.navbar-nav {
+    margin: 0 auto; /* Zarovnání na střed */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d1c4e9 !important; /* Světlejší fialová při najetí myší */
+}
+
+html {
+    scroll-behavior: smooth; /* Plynulé posouvání stránky */
+}
+
+
+/* 📌 Kontejner dropdownu */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 📌 Kontejner dropdownu */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 80px;  /* 📌 Přidáno pro posunutí dolů */
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 📌 Dropdown při otevření */
+.custom-dropdown:focus {
+    outline: none;
+    border-color: #ffcc00; /* Zlatý efekt při výběru */
+}
+
+/* 📌 Dropdown při najetí myší */
+.custom-dropdown:hover {
+    background-color: #333; /* 📌 Ještě tmavší pozadí */
+}
+
+
+
+#genreFilter {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+.film-info h2 {
+    text-align: center;  /* Vycentrování textu */
+    font-size: 44px;  /* Dvojnásobná velikost textu */
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;  /* Stylový filmový font */
+    color: #ff5733;  /* Oranžovo-červená barva */
+    margin-bottom: 10px;
+    margin-top: -20px;  /* Posunutí textu nahoru */
+    text-transform: uppercase; /* Velká písmena pro filmový styl */
+    letter-spacing: 3px; /* Větší rozestupy mezi písmeny */
+}
+
+
+.film-info p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.film-info strong {
+    font-weight: bold;
+}
+
+.film-info .btn-info {
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
+}
+
+.film-info .btn-info:hover {
+    background-color: #0056b3;
+}
+
+/* Styl modálního okna */
+.modal-content {
+    background-color: #222;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 1px solid #444;
+}
+
+.modal-body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.btn-close {
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+
+.film {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex; /* Důležité pro správné zobrazení filmů */
+}
+
+.hidden {
+    display: none !important; /* Skryje filmy a jejich datumy při filtrování */
+}
+
+
+.film img {
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.btn.rezervace {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.table {
+    background-color: #525151;
+    color: white;
+}
+
+.table th {
+    background-color: #ececec;
+}
+
+.nav-item a i {
+    transition: transform 0,7s ease-in-out; /* Plynulý přechod velikosti */
+}
+
+.nav-item a:hover i {
+    transform: scale(1.2); /* Zvětšení ikonky */
+    color: #ff4d4d; /* Změna barvy (volitelné) */
+}
+
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Výchozí stav - čára je skrytá */
+.navbar-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff4d4d, #ffcc00);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+/* Když je menu otevřené - zobraz čáru */
+.navbar-collapse.show ~ .navbar-divider {
+    display: block;
+}
+
+/* Speciální úpravy pro mobilní verzi */
+@media (max-width: 768px) {
+    .navbar-divider {
+        position: absolute;
+        bottom: -2px; /* Posune čáru dolů pod menu */
+    }
+
+    .navbar-collapse {
+        position: relative;
+        padding-bottom: 10px; /* Přidá prostor, aby čára nebyla nalepená */
+    }
+}
+
+
+.film-date-table {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.film-date {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 77, 77, 0.5);
+}
+
+
+/* Styl tlačítka pro schování/zobrazení */
+.toggle-nav {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+    z-index: 1100;
+}
+
+.toggle-nav:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+/* Skrytí tlačítka na mobilních zařízeních */
+@media (max-width: 768px) {
+    .toggle-nav {
+        display: none !important;
+    }
+}
+
+
+
+/* Navigace je standardně viditelná */
+#navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9); /* Lehce průhledné pozadí */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Skrytí navigace při aktivaci */
+.nav-hidden #navbar {
+    transform: translateY(-100%);
+}
+
+/* Otočení šipky při skrytí navigace */
+.nav-hidden .toggle-nav i {
+    transform: rotate(180deg);
+}
+
+/* Responzivní úpravy */
+@media (max-width: 992px) {
+    .navbar {
+        height: auto;
+        padding: 10px 15px;
+    }
+    .navbar-brand {
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+    .film {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .film img {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .film-info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        padding: 8px;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .film img {
+        width: 100%;
+    }
+    .film-info h2 {
+        font-size: 20px;
+    }
+    .film-description {
+        font-size: 14px;
+    }
+    .btn.rezervace {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1040;
+    }
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+    .navbar-nav .nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+    .film-date-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-form {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* 📱 Responzivita pro mobilní zařízení (maximální šířka 768px) */
+@media screen and (max-width: 768px) {
+    .film {
+        flex-direction: column; /* Filmy se budou řadit pod sebe */
+        align-items: center; /* Zarovná obsah na střed */
+        text-align: center;
+    }
+
+    .film img {
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 15px; /* Přidáme větší spodní mezeru pod obrázkem */
+    }
+
+    .film-info h2 {
+        font-size: 30px; /* Zmenšená velikost nadpisu na mobilech */
+        margin-top: 15px; /* Přidáme větší horní mezeru */
+    }
+
+    .film-buttons {
+        flex-direction: column; /* Tlačítka se umístí pod sebe */
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%; /* Tlačítka budou přes celou šířku */
+    }
+}
+
+ 
