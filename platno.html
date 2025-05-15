@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervace Sedadel</title>
+    <link rel="stylesheet" href="platno.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h2 id="selected-film-name">Vybraný film</h2>
+
+    <div class="container">
+        <div class="screen"></div>
+
+        <!-- ✅ Tady je důležité, aby sedadla mohla být vykreslena -->
+        <div class="seats-container"></div>
+
+        <p class="info">
+            <span class="seat selected"></span> Vybrané
+            <span class="seat"></span> Volné
+            <span class="seat occupied"></span> Obsazené
+        </p>
+
+        <p>Vybrali jste <span id="count">0</span> sedadel za <span id="total">0 Kč</span></p>
+
+        <button id="payButton">Přejít na platbu</button>
+
+    </div>
+
+    <script src="platno.js"></script>
+</body>
+</html>

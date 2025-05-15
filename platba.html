@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platba</title>
+    <link rel="stylesheet" href="platba.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Platba kartou</h1>
+
+        <p>Celková částka: <span id="totalPrice">0</span> Kč</p>
+        
+        <label for="firstName">Jméno:</label>
+<input type="text" id="firstName" placeholder="Vaše jméno" required>
+
+<label for="lastName">Příjmení:</label>
+<input type="text" id="lastName" placeholder="Vaše příjmení" required>
+
+
+        <label>Číslo karty:</label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9101 1121" maxlength="19">
+        
+        <div class="card-details">
+            <div>
+                <label>Expirace:</label>
+                <input type="text" id="expDate" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div>
+                <label>CVV:</label>
+                <input type="text" id="cvv" placeholder="123" maxlength="3">
+            </div>
+        </div>
+        
+        <label for="email">E-mail pro potvrzení:</label>
+
+        
+       <input type="email" id="email" placeholder="Váš e-mail" required>
+        <button id="confirmPayment">Potvrdit platbu</button>
+    </div>
+
+    <script src="platba.js"></script>
+</body>
+</html>
