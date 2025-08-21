@@ -11,7 +11,6 @@ if (!$data || !isset($data['email'], $data['jmeno'], $data['prijmeni'], $data['f
 
 // DATA
 $customerEmail = $data["email"];
-$adminEmail = "s.gorzolka@seznam.cz";
 $film = $data["film"];
 $seats = implode(", ", $data["seats"]);
 $price = $data["price"];
@@ -57,3 +56,4 @@ if ($successCustomer && $successAdmin) {
         "debug" => error_get_last()
     ]);
 }
+
